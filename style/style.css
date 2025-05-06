@@ -1,0 +1,11 @@
+section {
+    background: azure;
+}
+
+section#about {
+    background: orange;
+}
+
+ul li {
+    color: rebeccapurple;
+}
