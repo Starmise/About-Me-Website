@@ -1,11 +1,150 @@
+/* General */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 80px;
+  margin: 0px;
+}
+h2 {
+  font-size: 60px;
+  margin: 0px;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
 section {
-    background: azure;
+  display: flex;
+  width: 100%;
+  height: 100vh; /*vh son las unidades relativas al viewport*/
 }
 
-section#about {
-    background: orange;
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 45px;
+}
+nav ul li a {
+  color: #ffffff;
+  font-family: monospace;
 }
 
-ul li {
-    color: rebeccapurple;
+/* About */
+section.about .empty {
+  flex-basis: 37.5vw;
+  background: #e5e5e5;
+  border-radius: 100px;
+}
+section.about article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+section.about article .title {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  background: #1c47ff;
+  border-radius: 100px;
+  padding: 6.27vw;
+}
+section.about article .description {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #d6a3fb;
+  border-radius: 100px;
+  padding: 6.25vw;
+  color: #000000;
+}
+
+/* Service */
+section.service article {
+  display: flex;
+  width: 100%;
+}
+section.service figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 56.25vw;
+  margin: 0;
+  background: #d0ff94;
+  border-radius: 100px;
+}
+section.service figure img {
+  width: 50%;
+}
+section.service.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: #1f1a1c;
+  padding: 6.25vw;
+  border-radius: 100px;
+}
+section.service .text a {
+  font-family: monospace;
+}
+
+/* service section overrides */
+section.service.service-game figure {
+  background: #d0ff94;
+}
+section.service.service-game .text h2,
+section.service.service-game .text a {
+  color: #d6a3fb;
+}
+section.service.service-photo figure {
+  background: #1c47ff;
+}
+section.service.service-photo .text h2,
+section.service.service-photo .text a {
+  color: #d0ff94;
+}
+section.service.service-blender figure {
+  background: #d6a3fb;
+}
+section.service.service-blender .text h2,
+section.service.service-blender .text a {
+  color: #1c47ff;
+}
+
+/* Contact */
+section.contact {
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, #ffffff);
+  border-radius: 100px;
+}
+section.contact a {
+  font-size: 100px;
+  color: #000000;
 }
