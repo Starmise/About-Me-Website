@@ -1,0 +1,232 @@
+/* General */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  --border-radius: 100px;
+  --padding: 3.125vw;
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e14;
+  color: #d8dbe2;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 80px;
+  margin: 0px;
+}
+h2 {
+  font-size: 60px;
+  margin: 0px;
+}
+a {
+  color: #d8dbe2;
+  text-decoration: none;
+}
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh -100px); /*vh son las unidades relativas al viewheight*/
+  top: 100px;
+  z-index: 2;
+}
+section.sticky {
+  position: sticky;
+  margin-top: 100px;
+}
+section.full-screen {
+  height: 100vh;
+  top: 0;
+  margin-top: 0;
+  z-index: 3;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  z-index: 1;
+}
+nav.tabs {
+  z-index: 4;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 45px;
+}
+nav ul li a {
+  color: #d8dbe2;
+  font-family: monospace;
+}
+
+/* About */
+section.about .empty {
+  flex-basis: 37.5vw;
+  background: #1a1b23;
+  border-radius: var(--border-radius); /*Se pueden usar variables*/
+}
+section.about article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+section.about article .title {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  background: #3c4a7d;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+}
+section.about article .description {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #c2b7d7;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  color: #121212;
+}
+
+/* Service */
+section.service article {
+  display: flex;
+  width: 100%;
+}
+section.service figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 56.25vw;
+  margin: 0;
+  background: #6c7689;
+  border-radius: var(--border-radius);
+}
+section.service figure img {
+  width: 50%;
+  padding: var(--padding);
+}
+section.service .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: #1f2029;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+section.service .text a {
+  font-family: monospace;
+  color: #c2b7d7;
+}
+
+/* service section overrides */
+section.service.service-game figure {
+  background: #6c7689;
+}
+section.service.service-game .text h2,
+section.service.service-game .text a {
+  color: #a799d9;
+}
+section.service.service-photo figure {
+  background: #3c4a7d;
+}
+section.service.service-photo .text h2,
+section.service.service-photo .text a {
+  color: #ffd580;
+}
+section.service.service-blender figure {
+  background: #a799d9;
+}
+section.service.service-blender .text h2,
+section.service.service-blender .text a {
+  color: #3c4a7d;
+}
+
+/* Service Animations */
+section.service figure img {
+  animation-name: float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes float {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* Contact */
+section.contact {
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#3c4a7d, #6c7689 20%, #a799d9 70%, #1a1b23);
+  border-radius: var(--border-radius);
+  mix-blend-mode: difference;
+  opacity: 65%;
+}
+section.contact a {
+  font-size: 100px;
+  font-weight: bold;
+  color: #0e0e14;
+  transition: color 2s;
+  transition: filter 1s;
+  transition-timing-function: cubic-bezier(.1,.49,.96,.52);
+}
+section.contact a:hover {
+  color: #d8dbe2;
+  filter: blur(10px);
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 760px) {
+  html,
+  body {
+    background-color: #121212;
+    --border-radius: 50px;
+    --padding: 4.8vw;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  nav ul li {
+    margin-left: 25px;
+  }
+
+  section.service article {
+    flex-direction: column;
+  }
+  section.service figure {
+    flex-basis: 25vh;
+  }
+  section.service figure img {
+    width: 20%;
+  }
+  
+  section.contact a {
+    font-size: 50px;
+    /*transform: rotate(90deg);*/
+  }
+}
