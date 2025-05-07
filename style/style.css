@@ -4,6 +4,8 @@
 }
 html,
 body {
+  --border-radius: 100px;
+  --padding: 3.125vw;
   margin: 0;
   padding: 0;
   background-color: black;
@@ -24,9 +26,22 @@ a {
   text-decoration: none;
 }
 section {
+  position: relative;
   display: flex;
   width: 100%;
-  height: 100vh; /*vh son las unidades relativas al viewport*/
+  height: calc(100vh -100px); /*vh son las unidades relativas al viewheight*/
+  top: 100px;
+  z-index: 2;
+}
+section.sticky {
+  position: sticky;
+  margin-top: 100px;
+}
+section.full-screen {
+  height: 100vh;
+  top: 0;
+  margin-top: 0;
+  z-index: 3;
 }
 
 /* Navigation */
@@ -37,6 +52,7 @@ nav {
   top: 0;
   left: 0;
   font-size: 20px;
+  z-index: 1;
 }
 nav ul {
   display: flex;
@@ -59,7 +75,7 @@ nav ul li a {
 section.about .empty {
   flex-basis: 37.5vw;
   background: #e5e5e5;
-  border-radius: 100px;
+  border-radius: var(--border-radius); /*Se pueden usar variables*/
 }
 section.about article {
   flex: 1;
@@ -71,16 +87,16 @@ section.about article .title {
   display: flex;
   align-items: flex-end;
   background: #1c47ff;
-  border-radius: 100px;
-  padding: 6.27vw;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
 }
 section.about article .description {
   flex: 1;
   display: flex;
   align-items: center;
   background: #d6a3fb;
-  border-radius: 100px;
-  padding: 6.25vw;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
   color: #000000;
 }
 
@@ -96,19 +112,19 @@ section.service figure {
   flex-basis: 56.25vw;
   margin: 0;
   background: #d0ff94;
-  border-radius: 100px;
+  border-radius: var(--border-radius);
 }
 section.service figure img {
   width: 50%;
 }
-section.service.text {
+section.service .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  background: #1f1a1c;
-  padding: 6.25vw;
-  border-radius: 100px;
+  background: #3b3336;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
 }
 section.service .text a {
   font-family: monospace;
@@ -141,10 +157,45 @@ section.service.service-blender .text a {
 section.contact {
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, #ffffff);
-  border-radius: 100px;
+  background: linear-gradient(#1c47ff, #d0ff94 20%, #d6a3fb 70%, #e5e5e5);
+  border-radius: var(--border-radius);
 }
 section.contact a {
   font-size: 100px;
+  font-weight: bold;
   color: #000000;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 760px) {
+  html,
+  body {
+    background-color: red;
+    --border-radius: 50px;
+    --padding: 4.8vw;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  nav ul li {
+    margin-left: 25px;
+  }
+
+  section.service article {
+    flex-direction: column;
+  }
+  section.service figure {
+    flex-basis: 25vh;
+  }
+  section.service figure img {
+    width: 20%;
+  }
+  
+  section.contact a {
+    font-size: 50px;
+    /*transform: rotate(90deg);*/
+  }
 }
