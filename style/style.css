@@ -5,7 +5,7 @@
 html,
 body {
   --border-radius: 100px;
-  --padding: 3.125vw;
+  --padding: 3.125vw 6.3vw;
   margin: 0;
   padding: 0;
   background-color: #0e0e14;
@@ -14,7 +14,8 @@ body {
   font-family: sans-serif;
 }
 h1 {
-  font-size: 80px;
+  font-size: 70px;
+  line-height: 1em;
   margin: 0px;
 }
 h2 {
@@ -79,6 +80,7 @@ section.about .empty {
   flex-basis: 37.5vw;
   background: #1a1b23;
   border-radius: var(--border-radius); /*Se pueden usar variables*/
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 1);
 }
 section.about article {
   flex: 1;
@@ -86,12 +88,13 @@ section.about article {
   flex-direction: column;
 }
 section.about article .title {
-  flex: 2;
+  flex: 1;
   display: flex;
   align-items: flex-end;
   background: #3c4a7d;
   border-radius: var(--border-radius);
   padding: var(--padding);
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 1);
 }
 section.about article .description {
   flex: 1;
@@ -116,6 +119,8 @@ section.service figure {
   margin: 0;
   background: #6c7689;
   border-radius: var(--border-radius);
+  max-width: 62.5vw;
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 1);
 }
 section.service figure img {
   width: 50%;
@@ -168,10 +173,10 @@ section.service figure img {
 }
 @keyframes float {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(-5%);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(5%);
   }
 }
 
@@ -190,7 +195,7 @@ section.contact a {
   color: #0e0e14;
   transition: color 2s;
   transition: filter 1s;
-  transition-timing-function: cubic-bezier(.1,.49,.96,.52);
+  transition-timing-function: cubic-bezier(0.1, 0.49, 0.96, 0.52);
 }
 section.contact a:hover {
   color: #d8dbe2;
@@ -224,7 +229,7 @@ section.contact a:hover {
   section.service figure img {
     width: 20%;
   }
-  
+
   section.contact a {
     font-size: 50px;
     /*transform: rotate(90deg);*/
