@@ -5,11 +5,6 @@
 html, body {
   --border-radius: 100px;
   --padding: 3.125vw 6.25vw;
-  --blue: #1c47ff;
-  --pink: #d6a3fb;
-  --green: #d0ff94;
-  --grey: #e5e5e5;
-  --gutter: 3.125vw 6.25vw;
   color: #d8dbe2;
   background-color: #0e0e14;
   margin: 0;
@@ -212,7 +207,7 @@ section.contact a {
   color: #0e0e14;
   font-size: 100px;
   font-weight: bold;
-  transition: filter 1s cubic-bezier(.1, .49, .96, .52);
+  transition: color 2s cubic-bezier(.1, .49, .96, .52), filter 1s cubic-bezier(.1, .49, .96, .52);
 }
 
 section.contact a:hover {
@@ -228,6 +223,10 @@ section.contact a:hover {
   }
 
   h1 {
+    font-size: 60px;
+  }
+
+  h2 {
     font-size: 40px;
   }
 
