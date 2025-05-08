@@ -1,0 +1,14 @@
+{
+  "name": "about-me-website",
+  "version": "1.0.0",
+  "description": "Website about Starmise",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Starmise",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
