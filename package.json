@@ -9,6 +9,7 @@
   },
   "author": "Starmise",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.14.4",
     "parcel": "^2.14.4"
   }
 }
