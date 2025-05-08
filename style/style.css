@@ -5,7 +5,12 @@
 html,
 body {
   --border-radius: 100px;
-  --padding: 3.125vw 6.3vw;
+  --padding: 3.125vw 6.25vw;
+  --blue: #1c47ff;
+  --pink: #d6a3fb;
+  --green: #d0ff94;
+  --grey: #e5e5e5;
+  --gutter: 3.125vw 6.25vw;
   margin: 0;
   padding: 0;
   background-color: #0e0e14;
@@ -30,7 +35,7 @@ section {
   position: relative;
   display: flex;
   width: 100%;
-  height: calc(100vh -100px); /*vh son las unidades relativas al viewheight*/
+  height: calc(100vh - 100px); /*vh son las unidades relativas al viewheight*/
   top: 100px;
   z-index: 2;
 }
@@ -124,7 +129,7 @@ section.service figure {
 }
 section.service figure img {
   width: 50%;
-  padding: var(--padding);
+  /* padding: var(--padding); */
 }
 section.service .text {
   display: flex;
