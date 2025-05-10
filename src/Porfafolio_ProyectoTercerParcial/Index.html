@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Portafolio Luis Rosaldo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+ 
+  <header>
+      <div class="header__superior">
+          <div class="logo">
+              <img src="/Images/BMI.png" alt="no hay logov2">
+          </div>
+      </div>
+      <div class="container__menu">
+          <div class="menu">
+              <input type="checkbox" id="check__menu">
+              <label id="label__check" for="check__menu">
+                  <i class="fa-solid fa-bars icon__menu"></i>
+              </label>
+              <nav>
+                  <ul>
+                      <li><a href="#" id="selected">Inicio</a></li>
+                      <li><a href="#">Proyectos</a>
+                          <ul>
+                            <li><a href="Catharsis.html" target="_blank"> Catharsis</a></li>
+                            <li><a href="LucioGalaxy.html" target="_blank">Lucio Galaxy</a></li>
+                            <li><a href="Memeception.html" target="_blank">Memeception</a></li>
+                            <li><a href="Raboom.html" target="_blank">Raboom</a></li>
+                            <li><a href="CosmicFang.html" target="_blank">Cosmic Fang</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="#luis">Sobre mi</a></li>
+                      <li><a href="#Habilidades">Habilidades</a></li>
+                      <li><a href="#imagenes">Galería</a></li>
+                      <li><a href="#contactos">Contacto</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </header>
+      
+  <main>
+      <article id="luis">
+          <h2>¿Quién soy?</h2>
+          <p>Me describo como una persona responsable, honesta y con mucho entusiasmo e interés por aprender nuevas cosas y 
+            pasión pordesarrollar videojuegos. Siempre estoy dispuesto a aceptar nuevos desafíos que me permitan desarrollar 
+            nuevas habilidades a nivel profesional y personal.<br> Actualmente soy parte del nuevo estudio de videojuegos:
+            <span class="highlighted-text"> LIL Blossom Studio 
+              <img src="/Images/Blossom.png" alt="Flor de Cerezo" class="cherry-blossom-icon"></span>
+            con quienes espero seguir creando nuevos proyectos que destaquen y nos ayuden a crecer en la industria.</p>
+      </article>
+
+      <article id="Habilidades">
+          <h2>Habilidades</h2>
+          <ul>
+            <li>Manejo de Unity</li>
+            <li>Manejo de Unreal Engine con Blueprints</li>
+            <li>Desarrollo de software en C++</li>
+            <li>Manejo básico de modelado en Blender</li>
+            <li>Manejo de Photoshop</li>
+          </ul>
+      </article>
+
+      <article id="imagenes">
+        <h2>Galería</h2>
+        <div id="koromaruCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#koromaruCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#koromaruCarousel" data-slide-to="1"></li>
+            <li data-target="#koromaruCarousel" data-slide-to="2"></li>
+            <li data-target="#koromaruCarousel" data-slide-to="3"></li>
+            <li data-target="#koromaruCarousel" data-slide-to="4"></li>
+            <li data-target="#koromaruCarousel" data-slide-to="5"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Images/HookGameplay.png" alt="Image 1" class="d-block w-100 carousel-image">
+              </div>
+              <div class="carousel-item">
+                <img src="/Images/Catharsis.png" alt="Image 2" class="d-block w-100 carousel-image">
+              </div>
+              <div class="carousel-item">
+                <img src="/Images/Cosmicfang.png" alt="Image 3" class="d-block w-100 carousel-image">
+              </div>
+              <div class="carousel-item">
+                <img src="/Images/CatharsisMap.png" alt="Image 4" class="d-block w-100 carousel-image">
+              </div>
+              <div class="carousel-item">
+                <img src="/Images/hook.png" alt="Image 5" class="d-block w-100 carousel-image">
+              </div>
+              <div class="carousel-item">
+                  <img src="/Images/canastas.png" alt="Image 6" class="d-block w-100 carousel-image">
+                </div>
+          </div>
+          <a class="carousel-control-prev" href="#koromaruCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#koromaruCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+    </article>
+
+      <article id="contactos">
+          <h2>Contacto</h2>
+          <p>Puedes contactarme mediante cualquiera de las siguientes medios</p>
+          <li><a href="mailto:lu1sargv427@gmail.com">Correo Electrónico</a></li>
+          <li><a href="https://www.linkedin.com/in/luis-angel-rosaldo-gonz%C3%A1lez-4a85a2292/" target="_blank">Linkedin</a></li>
+          <li><a href="https://skrbasword.itch.io/" target="_blank">Itch.io</a></li>
+          <li><a href="https://www.instagram.com/l_starmise?igsh=MXRtc3FkYWhvMG1tcg%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
+          <br><p>No olvides que puedes consultar mis otras redes sociales en el pie de página</p>
+      </article>
+  </main>        
+
+  <footer>
+      <a href="https://beacons.ai/starmise">Redes Sociales de Starmise</a>
+  </footer>
+</body>
+</html>
