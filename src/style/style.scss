@@ -157,6 +157,7 @@ section.service {
   }
 }
 
+/* Services overdrives */
 section.service {
   &.service-game {
     figure {
@@ -193,6 +194,19 @@ section.service {
       h2,
       a {
         color: #3c4a7d;
+      }
+    }
+  }
+
+  &.service-cuiosity {
+    figure {
+      background: #4e6e5d;
+    }
+
+    .text {
+      h2,
+      a {
+        color: #d0f0c0;
       }
     }
   }

@@ -176,6 +176,14 @@ section.service.service-blender .text h2, section.service.service-blender .text 
   color: #3c4a7d;
 }
 
+section.service.service-cuiosity figure {
+  background: #4e6e5d;
+}
+
+section.service.service-cuiosity .text h2, section.service.service-cuiosity .text a {
+  color: #d0f0c0;
+}
+
 section.service figure img {
   animation-name: float;
   animation-duration: 2s;
