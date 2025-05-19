@@ -71,7 +71,7 @@ nav ul li {
 }
 
 nav > ul > li:first-child > a {
-    background-image: url(../imagenes/work-from-home.png);
+    /*background-image: url(../img/work-from-home.png);*/
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
