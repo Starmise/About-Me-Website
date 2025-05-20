@@ -3,7 +3,7 @@ let titleElement = document.querySelector(".about .title");
 
 let figureElements = document.querySelectorAll(".service figure");
 
-window.alert("Koromaru Supremacy");
+// window.alert("Koromaru Supremacy");
 
 // figureElements.forEach(function (element) {
 //   console.log(element);

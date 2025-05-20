@@ -1,7 +1,7 @@
 let emptyElement = document.querySelector(".about .empty");
 let titleElement = document.querySelector(".about .title");
 let figureElements = document.querySelectorAll(".service figure");
-window.alert("Koromaru Supremacy");
+// window.alert("Koromaru Supremacy");
 // figureElements.forEach(function (element) {
 //   console.log(element);
 //   element.style.background = "green";
