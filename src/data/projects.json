@@ -2,13 +2,13 @@
   {
     "id": "catharsis",
     "title": "Catharsis",
-    "cover": "img/Cover Image.png",
+    "cover": "img/CatharsisMain.png",
     "tagline": "RPG + Tycoon + Gacha",
     "tags": ["RPG", "Tycoon", "Gacha", "Diseño de niveles 3D"],
     "description": "Este es un juego intenta fusionar las dinámicas administrativas de un Tycoon y Gacha junto a una gran aventura Rpg. En donde cada dinámica trae un beneficio a otra estas además de que estas estarán simplificadas para la comodidad de los jugadores. Además de esto traerá una historia un tanto peculiar en la cual conocerás e interactuaras con algunos personajes entrañables y misteriosos a lo largo de tu aventura.",
     "process": "Catharsis fue un proyecto de larga duración realizado durante la carrera de desarrollo de videojuegos en la Universidad Cuauhtémoc Querétaro. Dicho proyecto duró 8 meses en realización y es el más extenso en el que he participado. Mi papel en este proyecto fue apoyar con la estructura del nivel, pasando los bocetos hechos a mano a mapas jugables en 3D. También me encargué de modelar estructuras básicas, ajustar las zonas de aparición aleatorias de los enemigos, añadir prompts y detalles a los mapas, editar algunas imágenes promocionales para el juego y apoyar con el sistema de inventario.",
     "role": "Estructura y diseño de niveles 3D, modelado de estructuras básicas, zonas de aparición de enemigos, arte promocional y sistema de inventario.",
-    "gallery": ["img/Catharsis.png", "img/CatharsisMap.png"],
+    "gallery": [],
     "externalLink": "https://justrab.itch.io/catharsis",
     "externalLabel": "¡Conoce más y prueba el juego!",
     "featured": true
@@ -16,7 +16,7 @@
   {
     "id": "lucio-galaxy",
     "title": "Lucio Galaxy",
-    "cover": "img/Galaxy.png",
+    "cover": "img/LucioGalaxyMain.png",
     "tagline": "Plataformas con gravedad estilo Mario Galaxy",
     "tags": ["Plataformas", "Físicas de gravedad", "Prototipo"],
     "description": "Lucio Galaxy es un juego con las mecánicas de gravedad de Mario Galaxy en donde el jugador deberá llegar al final del nivel antes de que pierda las plataformas necesarias para llegar.",
@@ -30,13 +30,13 @@
   {
     "id": "memeception",
     "title": "Memeception",
-    "cover": "img/Memeception.png",
+    "cover": "img/MemeceptionMain.png",
     "tagline": "Escapa de los memes — Global Game Jam 2024",
     "tags": ["Game Jam", "GGJ 2024", "Plataformas", "Shooter"],
     "description": "¡Escapa de los memes! Corre, usa un gancho, deslízate por las paredes y esquiva a varios memes. Vas armado con una escopeta y te enfrentas a tus perseguidores, con el objetivo de derrotar al mayor número posible. Pon a prueba tus habilidades de supervivencia y acumula puntos por cada meme derrotado sin que estos te alcancen.",
     "process": "Memeception fue el proyecto realizado para la Global Game Jam 2024, con el tema de \"Hazme reir\", por lo que siguiendo la modalidad de una game jam, su tiempo de desarrollo fue de solamente un fin de semana. Yo me encargué del movimiento básico del jugador, del sistema del gancho para poder usarlo en el nivel, de la habilidad para poder correr por paredes y del manejo de máscaras o capas para diferentes objetos.",
     "role": "Movimiento del jugador, sistema de gancho, wall-running y manejo de máscaras/capas.",
-    "gallery": ["img/HookGameplay.png", "img/hook.png"],
+    "gallery": [],
     "externalLink": "https://justrab.itch.io/memeception",
     "externalLabel": "¡Conoce más y prueba el juego!",
     "featured": false
@@ -44,7 +44,7 @@
   {
     "id": "raboom",
     "title": "Rab-boom",
-    "cover": "img/raboom.jpg",
+    "cover": "img/RaboomMain.jpg",
     "tagline": "Conejo minero explosivo, acción top-down por rondas",
     "tags": ["Top Down", "Acción", "IA de enemigos", "Animación"],
     "description": "El videojuego trata de un conejo llamado White Bun que trabaja como minero, y que tiene la habilidad de crear explosiones, además se encarga de hacer explotar a los enemigos, que son los minerales llamados Mr Mustache (que también por alguna razón parecen gatos), que necesita extraer para poder completar su trabajo. Pero eso no es todo, el protagonista necesita realizar sus explosiones de vez en cuando, de lo contrario acabará perdiendo. Es un juego por rondas con vista Top-down.",
@@ -58,7 +58,7 @@
   {
     "id": "cosmic-fang",
     "title": "Cosmic Fang",
-    "cover": "img/Cosmicfang.png",
+    "cover": "img/CosmicFangMain.png",
     "tagline": "Shooter 2D top-down — Game a Week",
     "tags": ["Shooter 2D", "Top Down", "Game a Week", "Programación"],
     "description": "Este juego es un Un shooter en 2D de vista Top Down, donde varios animales o monstruos con colmillos persiguen al jugador y por cada enemigo que elimine el jugador, este gana un colmillo. Los colmillos serían los puntos.",

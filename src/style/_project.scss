@@ -1,0 +1,66 @@
+/* Página de detalle de proyecto (plantilla única project.html) */
+
+@use 'tokens' as *;
+
+.p5-project {
+  padding-bottom: clamp(40px, 7vw, 90px);
+}
+
+/* Cabecera: portada + intro */
+.p5-project__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 50px);
+  padding: clamp(32px, 6vw, 80px) 0 clamp(24px, 4vw, 50px);
+}
+
+.p5-project__cover {
+  position: relative;
+  border: 4px solid var(--p5-red);
+  clip-path: $clip-shard;
+  box-shadow: $shadow-deep;
+  transform: rotate(-1.5deg);
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+}
+
+.p5-project__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.p5-project__title {
+  @include p5-display(clamp(2.6rem, 7vw, 5rem));
+  color: var(--p5-white);
+  margin: 0;
+  text-shadow: 4px 4px 0 var(--p5-black);
+}
+
+.p5-project__tagline {
+  font-family: $font-text;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--p5-red-glow);
+  transform: skewX($skew);
+  margin: 0;
+}
+
+/* Acciones (enlace externo + volver) */
+.p5-project__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: clamp(24px, 4vw, 48px);
+}
+
+@media (max-width: 760px) {
+  .p5-project__hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}

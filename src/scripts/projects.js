@@ -1,11 +1,7 @@
 /* Render del portafolio desde projects.json */
 
 import projects from "../data/projects.json";
-
-/* Las imágenes se sirven desde la copia estática de src/img (ver .parcelrc) */
-function asset(path) {
-  return path;
-}
+import { asset, GALLERY_IMAGES } from "./assets.js";
 
 /* Tarjeta de proyecto */
 function renderCard(project) {
@@ -30,12 +26,6 @@ function renderCard(project) {
 /* Entrada del submenú de navegación */
 function renderMenuItem(project) {
   return `<li><a href="project.html?id=${project.id}"><span>${project.title}</span></a></li>`;
-}
-
-/* Imágenes para la galería: portadas + galerías de cada proyecto, sin repetir */
-function galleryImages() {
-  const all = projects.flatMap((p) => [p.cover, ...(p.gallery || [])]);
-  return [...new Set(all)];
 }
 
 /* Carrusel propio: navegación, indicadores y autoplay */
@@ -93,7 +83,7 @@ function init() {
   if (menu) menu.innerHTML = projects.map(renderMenuItem).join("");
 
   const carousel = document.getElementById("gallery");
-  if (carousel) setupCarousel(carousel, galleryImages());
+  if (carousel) setupCarousel(carousel, GALLERY_IMAGES);
 
   setupNavToggle();
 }

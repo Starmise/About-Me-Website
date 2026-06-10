@@ -13,7 +13,7 @@ siguientes campos:
 |-----------------|------------|-------------|-------------|
 | `id`            | `string`   | Sí          | Identificador único en `kebab-case`. Se usa en la URL de detalle (`project.html?id=<id>`). No debe repetirse ni contener espacios. |
 | `title`         | `string`   | Sí          | Nombre visible del proyecto. |
-| `cover`         | `string`   | Sí          | Ruta de la imagen principal, relativa a `src/` (p. ej. `img/Galaxy.png`). |
+| `cover`         | `string`   | Sí          | Ruta de la portada, relativa a `src/` (p. ej. `img/LucioGalaxyMain.png`). |
 | `tagline`       | `string`   | No          | Frase corta de gancho que se muestra bajo el título en la tarjeta. |
 | `tags`          | `string[]` | No          | Etiquetas de tecnologías/roles para chips/filtros. Puede ir vacío `[]`. |
 | `description`   | `string`   | Sí          | Descripción del proyecto (sección "Descripción del proyecto"). |

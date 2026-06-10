@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Proyecto · Luis Rosaldo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/main.scss">
+</head>
+
+<body id="top">
+
+  <!-- Navegación -->
+  <nav class="p5-nav">
+    <a class="p5-nav__brand" href="IndexP3.html">Starmise</a>
+    <button class="p5-nav__toggle" aria-label="Abrir menú"><span></span></button>
+    <ul class="p5-nav__list">
+      <li><a class="p5-nav__link" href="IndexP3.html#top"><span>Inicio</span></a></li>
+      <li><a class="p5-nav__link" href="IndexP3.html#about"><span>Sobre mí</span></a></li>
+      <li><a class="p5-nav__link" href="IndexP3.html#demoreel"><span>DemoReel</span></a></li>
+      <li class="p5-nav__item">
+        <a class="p5-nav__link is-active" href="IndexP3.html#projects"><span>Proyectos</span></a>
+        <ul class="p5-nav__dropdown" id="projects-menu"></ul>
+      </li>
+      <li><a class="p5-nav__link" href="IndexP3.html#skills"><span>Habilidades</span></a></li>
+      <li><a class="p5-nav__link" href="IndexP3.html#gallery-section"><span>Galería</span></a></li>
+      <li><a class="p5-nav__link" href="IndexP3.html#contact"><span>Contacto</span></a></li>
+      <li><a class="p5-nav__link" href="indexMin.html"><span>Versión corta</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="p5-container p5-project" id="project-detail"></main>
+
+  <!-- Footer -->
+  <footer class="p5-footer">
+    <a href="https://beacons.ai/starmise" target="_blank">Redes Sociales de Starmise</a>
+  </footer>
+
+  <script type="module" src="scripts/project.js"></script>
+</body>
+</html>
