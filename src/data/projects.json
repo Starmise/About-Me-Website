@@ -1,0 +1,72 @@
+[
+  {
+    "id": "catharsis",
+    "title": "Catharsis",
+    "cover": "img/Cover Image.png",
+    "tagline": "RPG + Tycoon + Gacha",
+    "tags": ["RPG", "Tycoon", "Gacha", "Diseño de niveles 3D"],
+    "description": "Este es un juego intenta fusionar las dinámicas administrativas de un Tycoon y Gacha junto a una gran aventura Rpg. En donde cada dinámica trae un beneficio a otra estas además de que estas estarán simplificadas para la comodidad de los jugadores. Además de esto traerá una historia un tanto peculiar en la cual conocerás e interactuaras con algunos personajes entrañables y misteriosos a lo largo de tu aventura.",
+    "process": "Catharsis fue un proyecto de larga duración realizado durante la carrera de desarrollo de videojuegos en la Universidad Cuauhtémoc Querétaro. Dicho proyecto duró 8 meses en realización y es el más extenso en el que he participado. Mi papel en este proyecto fue apoyar con la estructura del nivel, pasando los bocetos hechos a mano a mapas jugables en 3D. También me encargué de modelar estructuras básicas, ajustar las zonas de aparición aleatorias de los enemigos, añadir prompts y detalles a los mapas, editar algunas imágenes promocionales para el juego y apoyar con el sistema de inventario.",
+    "role": "Estructura y diseño de niveles 3D, modelado de estructuras básicas, zonas de aparición de enemigos, arte promocional y sistema de inventario.",
+    "gallery": ["img/Catharsis.png", "img/CatharsisMap.png"],
+    "externalLink": "https://justrab.itch.io/catharsis",
+    "externalLabel": "¡Conoce más y prueba el juego!",
+    "featured": true
+  },
+  {
+    "id": "lucio-galaxy",
+    "title": "Lucio Galaxy",
+    "cover": "img/Galaxy.png",
+    "tagline": "Plataformas con gravedad estilo Mario Galaxy",
+    "tags": ["Plataformas", "Físicas de gravedad", "Prototipo"],
+    "description": "Lucio Galaxy es un juego con las mecánicas de gravedad de Mario Galaxy en donde el jugador deberá llegar al final del nivel antes de que pierda las plataformas necesarias para llegar.",
+    "process": "Lucio Galaxy es un prototipo para la clase de prototipos, por lo que la duración fue de una semana de desarrollo. El tema de esta semana, para este proyecto fue \"se acaba el espacio\". Yo me encargué de añadir algunos materiales a la versión de prueba, de incluir obstáculos que reiniciaran el nivel si el jugador colisiona con estos y de ajustar algunos detalles del gameplay.",
+    "role": "Materiales, obstáculos con reinicio de nivel por colisión y ajustes de gameplay.",
+    "gallery": [],
+    "externalLink": "https://drive.google.com/file/d/1OCtb32EWJbsF1H3j_hzuFNUbNVPW5tdW/view?usp=sharing",
+    "externalLabel": "¡Prueba el juego!",
+    "featured": false
+  },
+  {
+    "id": "memeception",
+    "title": "Memeception",
+    "cover": "img/Memeception.png",
+    "tagline": "Escapa de los memes — Global Game Jam 2024",
+    "tags": ["Game Jam", "GGJ 2024", "Plataformas", "Shooter"],
+    "description": "¡Escapa de los memes! Corre, usa un gancho, deslízate por las paredes y esquiva a varios memes. Vas armado con una escopeta y te enfrentas a tus perseguidores, con el objetivo de derrotar al mayor número posible. Pon a prueba tus habilidades de supervivencia y acumula puntos por cada meme derrotado sin que estos te alcancen.",
+    "process": "Memeception fue el proyecto realizado para la Global Game Jam 2024, con el tema de \"Hazme reir\", por lo que siguiendo la modalidad de una game jam, su tiempo de desarrollo fue de solamente un fin de semana. Yo me encargué del movimiento básico del jugador, del sistema del gancho para poder usarlo en el nivel, de la habilidad para poder correr por paredes y del manejo de máscaras o capas para diferentes objetos.",
+    "role": "Movimiento del jugador, sistema de gancho, wall-running y manejo de máscaras/capas.",
+    "gallery": ["img/HookGameplay.png", "img/hook.png"],
+    "externalLink": "https://justrab.itch.io/memeception",
+    "externalLabel": "¡Conoce más y prueba el juego!",
+    "featured": false
+  },
+  {
+    "id": "raboom",
+    "title": "Rab-boom",
+    "cover": "img/raboom.jpg",
+    "tagline": "Conejo minero explosivo, acción top-down por rondas",
+    "tags": ["Top Down", "Acción", "IA de enemigos", "Animación"],
+    "description": "El videojuego trata de un conejo llamado White Bun que trabaja como minero, y que tiene la habilidad de crear explosiones, además se encarga de hacer explotar a los enemigos, que son los minerales llamados Mr Mustache (que también por alguna razón parecen gatos), que necesita extraer para poder completar su trabajo. Pero eso no es todo, el protagonista necesita realizar sus explosiones de vez en cuando, de lo contrario acabará perdiendo. Es un juego por rondas con vista Top-down.",
+    "process": "Rab-boom fue un prototipo realizado para la clase de taller de dieseño de juegos, su desarrollo fue de un mes. Yo me encargué de programar el movimiento del jugador, la inteligencia artificial de los enemigos, de generar el árbol de animaciones tanto de los enemigos como del jugador y que este funcionara con base a las acciones del juego y de arreglar algunos errores con los límites del mapa.",
+    "role": "Movimiento del jugador, IA de enemigos, árbol de animaciones y corrección de límites del mapa.",
+    "gallery": [],
+    "externalLink": "https://69bits.itch.io/rab-boom",
+    "externalLabel": "¡Conoce más y prueba el juego!",
+    "featured": false
+  },
+  {
+    "id": "cosmic-fang",
+    "title": "Cosmic Fang",
+    "cover": "img/Cosmicfang.png",
+    "tagline": "Shooter 2D top-down — Game a Week",
+    "tags": ["Shooter 2D", "Top Down", "Game a Week", "Programación"],
+    "description": "Este juego es un Un shooter en 2D de vista Top Down, donde varios animales o monstruos con colmillos persiguen al jugador y por cada enemigo que elimine el jugador, este gana un colmillo. Los colmillos serían los puntos.",
+    "process": "Este es un prototipo para la clase de prototipos, en la cual se usó la temática game a week, que como su nombre lo dice, constaba de realizar un juego por semana con temáticas diferentes. El tema de esta semana, para este proyecto fue colmillo. Yo me encargué de absolutamente toda la parte de programación del jugador, del deiseño de nivel, del diseño de UI, de las animaciones, la inteligencia artifical de los enemigos y de la música del juego.",
+    "role": "Programación completa del jugador, diseño de nivel, diseño de UI, animaciones, IA de enemigos y música.",
+    "gallery": [],
+    "externalLink": "https://skrbasword.itch.io/cosmic-fang",
+    "externalLabel": "¡Conoce más y prueba el juego!",
+    "featured": false
+  }
+]
