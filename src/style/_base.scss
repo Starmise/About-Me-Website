@@ -25,13 +25,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 
-  /* Textura de rayas rojas inclinadas, marca de la casa P5 */
-  background-image:
-    repeating-linear-gradient(
-      115deg,
-      rgba(229, 9, 20, 0.06) 0 2px,
-      transparent 2px 9px
-    );
+  /* Estrellas y líneas asimétricas (estética P5), no se repite */
+  background-image: url("../img/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
 }
 
