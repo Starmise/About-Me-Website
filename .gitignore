@@ -1,1 +1,17 @@
+# Notas internas
 /docs
+
+# Dependencias (se restauran con: npm install)
+/node_modules
+
+# Salida de build y caché de Parcel
+/dist
+/.parcel-cache
+
+# Logs y temporales
+*.log
+npm-debug.log*
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
