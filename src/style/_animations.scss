@@ -1,0 +1,80 @@
+/* Animaciones Persona 5 */
+/* Keyframes de impacto + utilidades. Respeta prefers-reduced-motion. */
+
+@use 'tokens' as *;
+
+/* Entrada diagonal */
+@keyframes p5-slide-in {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 30px) skewX($skew);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) skewX($skew);
+  }
+}
+
+/* Banda roja barriendo en horizontal */
+@keyframes p5-swipe-in {
+  0%   { transform: scaleX(0); transform-origin: left; }
+  100% { transform: scaleX(1); transform-origin: left; }
+}
+
+/* Glitch para titulares / transiciones */
+@keyframes p5-glitch {
+  0%, 100% { transform: translate(0, 0) skewX($skew); }
+  20%      { transform: translate(-3px, 2px) skewX($skew); }
+  40%      { transform: translate(3px, -2px) skewX($skew); }
+  60%      { transform: translate(-2px, -1px) skewX($skew); }
+  80%      { transform: translate(2px, 1px) skewX($skew); }
+}
+
+/* Latido rojo */
+@keyframes p5-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(229, 9, 20, 0); }
+  50%      { box-shadow: $shadow-red; }
+}
+
+/* Jelly (inspirado en el doc de referencia) */
+@keyframes p5-jelly {
+  0% {
+    transform: scale(1.2, 1) skewX(20deg) translateY(3px) rotateZ(-10deg);
+  }
+  50% {
+    transform: scale(1.2, 1.12) skewX(-15deg) translateY(-2px);
+  }
+  100% {
+    transform: scale(1.2, 1) skewX(20deg) translateY(3px) rotateZ(-14deg);
+  }
+}
+
+/* Rebote inclinado para iconos/imágenes al hover */
+@keyframes p5-tilt-bounce {
+  0%   { transform: scale(1) rotate(-7deg); }
+  50%  { transform: scale(1.4) rotate(-7deg); }
+  100% { transform: scale(1.15) rotate(-7deg); }
+}
+
+/* Clases utilitarias */
+.p5-anim-slide  { animation: p5-slide-in 0.5s $ease-snap both; }
+.p5-anim-glitch { animation: p5-glitch 0.4s steps(2) both; }
+.p5-anim-pulse  { animation: p5-pulse 1.8s ease-in-out infinite; }
+
+/* Escalona la entrada de listas/grillas: añadir --i por elemento */
+.p5-stagger > * {
+  animation: p5-slide-in 0.5s $ease-snap both;
+  animation-delay: calc(var(--i, 0) * 80ms);
+}
+
+/* Accesibilidad: apaga el movimiento intenso si el usuario lo pide */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

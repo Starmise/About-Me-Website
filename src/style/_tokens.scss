@@ -1,0 +1,82 @@
+/* Tokens Persona 5 */
+/* Variables, escalas y mixins reutilizados. Importar con: @use 'tokens' as *; */
+
+/* Paleta */
+$p5-red:        #e50914;  /* Rojo primario */
+$p5-red-deep:   #b00610;  /* Rojo profundo */
+$p5-red-glow:   #ff2a39;  /* Rojo brillante */
+$p5-black:      #0a0a0a;  /* Fondo principal */
+$p5-ink:        #141414;  /* Tinta / texto sobre claro */
+$p5-gray:       #1a1a1a;  /* Superficies secundarias */
+$p5-gray-soft:  #242424;  /* Superficies elevadas */
+$p5-white:      #f2f2f2;  /* Texto sobre rojo/negro */
+$p5-cyan:       #00e5ff;  /* Acento frío puntual */
+
+/* Tipografía */
+/* El <link> de Google Fonts (Anton + Inter) se añade en el <head> */
+$font-display: 'Anton', 'Oswald', 'Arial Narrow', 'Impact', sans-serif;
+$font-text:    'Inter', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+/* Geometría / movimiento */
+$skew:          -8deg;     /* Inclinación base */
+$skew-strong:   -12deg;
+$radius:        4px;
+$ease-snap:     cubic-bezier(0.2, 0.9, 0.3, 1);   /* Entrada con rebote */
+$ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+
+/* Sombras */
+$shadow-hard:   6px 6px 0 #{$p5-black};
+$shadow-red:    0 0 24px rgba(229, 9, 20, 0.55);
+$shadow-deep:   0 18px 40px rgba(0, 0, 0, 0.6);
+
+/* Clip-paths angulares */
+$clip-shard:   polygon(0 0, 100% 4%, 97% 100%, 3% 94%);     /* Tarjeta irregular */
+$clip-slab:    polygon(0 0, 100% 0, 100% 88%, 0 100%);      /* Banda con corte diagonal */
+$clip-tab:     polygon(8% 0, 100% 0, 92% 100%, 0 100%);     /* Pestaña inclinada */
+
+/* Tokens como CSS custom properties */
+@mixin tokens-root {
+  :root {
+    --p5-red: #{$p5-red};
+    --p5-red-deep: #{$p5-red-deep};
+    --p5-red-glow: #{$p5-red-glow};
+    --p5-black: #{$p5-black};
+    --p5-ink: #{$p5-ink};
+    --p5-gray: #{$p5-gray};
+    --p5-gray-soft: #{$p5-gray-soft};
+    --p5-white: #{$p5-white};
+    --p5-cyan: #{$p5-cyan};
+    --font-display: #{$font-display};
+    --font-text: #{$font-text};
+    --skew: #{$skew};
+    --radius: #{$radius};
+  }
+}
+
+/* Mixins de utilidad */
+
+/* Título de impacto: condensado, mayúsculas e inclinado */
+@mixin p5-display($size: 3rem, $skew-amt: $skew) {
+  font-family: $font-display;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  font-size: $size;
+  transform: skewX($skew-amt);
+}
+
+/* Bloque rojo angular reutilizable */
+@mixin p5-red-block {
+  background: $p5-red;
+  color: $p5-white;
+  clip-path: $clip-slab;
+}
+
+/* Centra contenido con ancho máximo de lectura */
+@mixin container($max: 1200px) {
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}

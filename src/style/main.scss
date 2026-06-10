@@ -1,0 +1,9 @@
+/* Hoja principal Persona 5 */
+/* Punto de entrada único: une todos los parciales. Las páginas enlazan solo este archivo. */
+/* El <head> debe incluir las fuentes (Fase 3): */
+/* <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"> */
+
+@use 'tokens';
+@use 'base';
+@use 'animations';
+@use 'components';

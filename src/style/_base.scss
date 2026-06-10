@@ -1,0 +1,94 @@
+/* Base Persona 5 */
+/* Reset ligero, tipografía global y fondo. */
+
+@use 'tokens' as *;
+
+@include tokens-root;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--p5-black);
+  color: var(--p5-white);
+  font-family: var(--font-text);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+
+  /* Textura de rayas rojas inclinadas, marca de la casa P5 */
+  background-image:
+    repeating-linear-gradient(
+      115deg,
+      rgba(229, 9, 20, 0.06) 0 2px,
+      transparent 2px 9px
+    );
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  margin: 0 0 0.4em;
+}
+
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
+h2 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h3 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); }
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--p5-white);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--p5-red);
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--p5-red);
+  color: var(--p5-white);
+}
+
+/* Scrollbar temática */
+* {
+  scrollbar-color: var(--p5-red) var(--p5-black);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--p5-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--p5-red);
+  border: 3px solid var(--p5-black);
+}
