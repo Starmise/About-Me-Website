@@ -2,10 +2,10 @@
   "name": "about-me-website",
   "version": "2.0.0",
   "description": "Website about Starmise",
-  "source": ["src/IndexP3.html", "src/project.html"],
+  "source": ["src/IndexP3.html", "src/project.html", "src/indexMin.html"],
   "scripts": {
-    "start": "parcel src/IndexP3.html src/project.html",
-    "build": "parcel build src/IndexP3.html src/project.html"
+    "start": "parcel src/IndexP3.html src/project.html src/indexMin.html",
+    "build": "parcel build src/IndexP3.html src/project.html src/indexMin.html"
   },
   "author": "Starmise",
   "staticFiles": {

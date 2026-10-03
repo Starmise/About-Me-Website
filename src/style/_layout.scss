@@ -100,6 +100,65 @@
   }
 }
 
+/* Tarjeta de servicio (versión corta) */
+.p5-service {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: var(--p5-gray);
+  border-left: 6px solid var(--p5-red);
+  padding: clamp(20px, 4vw, 36px);
+  clip-path: polygon(0 0, 100% 0, 99% 100%, 0 96%);
+  transition: transform 0.2s $ease-snap, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-6px);
+    box-shadow: $shadow-red, $shadow-deep;
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 150px;
+
+    img {
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      animation: p5-float 3s ease-in-out infinite alternate;
+      filter: drop-shadow($shadow-hard);
+    }
+  }
+
+  &__title {
+    @include p5-display(1.6rem, 0deg);
+    color: var(--p5-red-glow);
+    margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+
+      &::before {
+        content: '\2605'; /* estrella P5 */
+        position: absolute;
+        left: 0;
+        color: var(--p5-red);
+      }
+    }
+  }
+}
+
 /* Lista de habilidades como chips */
 .p5-skills {
   display: flex;

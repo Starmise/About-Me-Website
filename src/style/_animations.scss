@@ -49,6 +49,12 @@
   }
 }
 
+/* Flotación suave para iconos/ilustraciones */
+@keyframes p5-float {
+  0%   { transform: translateY(-6%); }
+  100% { transform: translateY(6%); }
+}
+
 /* Rebote inclinado para iconos/imágenes al hover */
 @keyframes p5-tilt-bounce {
   0%   { transform: scale(1) rotate(-7deg); }
