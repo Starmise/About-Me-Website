@@ -1,0 +1,328 @@
+/* Layout Persona 5 */
+/* Ensamblado de la página: nav móvil, hero, secciones, carrusel, footer. */
+
+@use 'tokens' as *;
+
+/* Submenú de proyectos */
+.p5-nav__item {
+  position: relative;
+}
+.p5-nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin-top: 0.4rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  list-style: none;
+  background: var(--p5-black);
+  border: 3px solid var(--p5-red);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.18s $ease-snap;
+  z-index: 1100;
+}
+.p5-nav__item:hover .p5-nav__dropdown,
+.p5-nav__item:focus-within .p5-nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.p5-nav__dropdown a {
+  display: block;
+  padding: 0.4em 0.8em;
+  font-family: $font-display;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--p5-white);
+  transform: skewX($skew);
+  transition: background 0.15s ease, transform 0.15s $ease-snap;
+
+  &:hover {
+    background: var(--p5-red);
+    transform: skewX($skew) translateX(6px);
+  }
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
+.p5-nav__toggle {
+  display: none;
+  width: 44px;
+  height: 38px;
+  padding: 8px;
+  background: var(--p5-red);
+  border: 3px solid var(--p5-black);
+  cursor: pointer;
+
+  span,
+  span::before,
+  span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: var(--p5-white);
+    transition: transform 0.2s ease;
+  }
+  span { position: relative; top: 8px; }
+  span::before { position: absolute; top: -8px; width: 100%; }
+  span::after  { position: absolute; top: 8px;  width: 100%; }
+}
+
+/* Hero */
+.p5-hero {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 4vw, 50px);
+  flex-wrap: wrap;
+  padding: clamp(40px, 8vw, 100px) 0;
+
+  &__logo {
+    width: clamp(140px, 22vw, 230px);
+    border: 4px solid var(--p5-red);
+    transform: rotate(-3deg);
+    box-shadow: $shadow-hard;
+  }
+  &__title {
+    @include p5-display(clamp(2.8rem, 9vw, 6rem));
+    color: var(--p5-white);
+    margin: 0;
+    text-shadow: 4px 4px 0 var(--p5-black);
+  }
+  &__subtitle {
+    font-family: $font-text;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--p5-red-glow);
+    transform: skewX($skew);
+  }
+}
+
+/* Tarjeta de servicio (versión corta) */
+.p5-service {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: var(--p5-gray);
+  border-left: 6px solid var(--p5-red);
+  padding: clamp(20px, 4vw, 36px);
+  clip-path: polygon(0 0, 100% 0, 99% 100%, 0 96%);
+  transition: transform 0.2s $ease-snap, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-6px);
+    box-shadow: $shadow-red, $shadow-deep;
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 150px;
+
+    img {
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      animation: p5-float 3s ease-in-out infinite alternate;
+      filter: drop-shadow($shadow-hard);
+    }
+  }
+
+  &__title {
+    @include p5-display(1.6rem, 0deg);
+    color: var(--p5-red-glow);
+    margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+
+      &::before {
+        content: '\2605'; /* estrella P5 */
+        position: absolute;
+        left: 0;
+        color: var(--p5-red);
+      }
+    }
+  }
+}
+
+/* Lista de habilidades como chips */
+.p5-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+
+  li {
+    padding: 0.4em 1em;
+    background: var(--p5-white);
+    color: var(--p5-black);
+    font-family: $font-display;
+    text-transform: uppercase;
+    transform: skewX($skew);
+    clip-path: $clip-tab;
+  }
+}
+
+/* DemoReel */
+.p5-demoreel__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 4px solid var(--p5-red);
+  clip-path: $clip-shard;
+  box-shadow: $shadow-deep;
+  background: #000;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+/* Contacto */
+.p5-contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  a {
+    font-family: $font-display;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    transform: skewX($skew);
+    display: inline-block;
+    transition: transform 0.15s $ease-snap, color 0.15s ease;
+
+    &:hover { transform: skewX($skew) translateX(10px); color: var(--p5-red); }
+  }
+}
+
+/* Texto destacado + flor decorativa (Little Blossom) */
+.highlighted-text {
+  font-weight: 700;
+  color: var(--p5-red-glow);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+.cherry-blossom-icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
+/* Footer */
+.p5-footer {
+  text-align: center;
+  padding: clamp(30px, 5vw, 60px) 0;
+  background: var(--p5-black);
+  border-top: 4px solid var(--p5-red);
+
+  a {
+    font-family: $font-display;
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    text-transform: uppercase;
+    color: var(--p5-red);
+  }
+}
+
+/* Carrusel propio (reemplaza el de Bootstrap) */
+.p5-carousel {
+  position: relative;
+  overflow: hidden;
+  background: var(--p5-gray);
+  border: 3px solid var(--p5-black);
+  clip-path: $clip-shard;
+
+  &__track {
+    display: flex;
+    transition: transform 0.4s $ease-out;
+  }
+  &__slide {
+    flex: 0 0 100%;
+    height: clamp(240px, 45vw, 480px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    color: var(--p5-white);
+    background: var(--p5-red);
+    border: 3px solid var(--p5-black);
+    cursor: pointer;
+
+    &.is-prev { left: 12px; }
+    &.is-next { right: 12px; }
+    &:hover { background: var(--p5-red-deep); }
+  }
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.8rem;
+  }
+  &__dot {
+    width: 14px;
+    height: 14px;
+    background: var(--p5-gray-soft);
+    border: 2px solid var(--p5-red);
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    &.is-active { background: var(--p5-red); }
+  }
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .p5-nav__toggle { display: block; }
+
+  .p5-nav__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 1rem;
+    background: var(--p5-black);
+    border-bottom: 4px solid var(--p5-red);
+    display: none;
+  }
+  .p5-nav.is-open .p5-nav__list { display: flex; }
+
+  .p5-nav__dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin-top: 0.3rem;
+    border-width: 2px;
+  }
+
+  .p5-hero { flex-direction: column; text-align: center; }
+}

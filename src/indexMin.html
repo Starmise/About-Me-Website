@@ -1,116 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style/style.scss">
-  <title>About Starmise</title>
+  <meta charset="utf-8">
+  <title>About Starmise · Versión corta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/main.scss">
 </head>
-<!-------------BODY-------------->
 
-<body>
-  <nav class="tabs">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+<body id="top">
+
+  <!-- Navegación -->
+  <nav class="p5-nav">
+    <a class="p5-nav__brand" href="IndexP3.html">Starmise</a>
+    <button class="p5-nav__toggle" aria-label="Abrir menú"><span></span></button>
+    <ul class="p5-nav__list">
+      <li><a class="p5-nav__link" href="#top"><span>Inicio</span></a></li>
+      <li><a class="p5-nav__link" href="#about"><span>Sobre mí</span></a></li>
+      <li><a class="p5-nav__link" href="#services"><span>Qué hago</span></a></li>
+      <li class="p5-nav__item">
+        <a class="p5-nav__link" href="IndexP3.html#projects"><span>Proyectos</span></a>
+        <ul class="p5-nav__dropdown" id="projects-menu"></ul>
+      </li>
+      <li><a class="p5-nav__link" href="#contact"><span>Contacto</span></a></li>
+      <li><a class="p5-nav__link is-active" href="IndexP3.html"><span>Portafolio completo</span></a></li>
     </ul>
   </nav>
 
-  <section id="about" class="about">
-    <div class="empty"></div>
-    <article>
-      <div class="title">
-        <h1>Acerca de mí</h1>
+  <main class="p5-container">
+
+    <!-- Hero -->
+    <header class="p5-hero">
+      <img class="p5-hero__logo" src="img/BMI.png" alt="Logo de Starmise">
+      <div>
+        <h1 class="p5-hero__title">Luis Rosaldo</h1>
+        <p class="p5-hero__subtitle">Game Developer · Versión corta</p>
       </div>
-      <div class="description">
+    </header>
+
+    <!-- Sobre mí -->
+    <section id="about" class="p5-section">
+      <h2 class="p5-heading"><span>Acerca de mí</span></h2>
+      <div class="p5-panel">
         <p>
-          Me llamo Luis Rosaldo, soy de México y me gusta mucho crear
-          proyectos digitales que pueda compartir con las personas.
-          Me especializo en el desarrollo de videojuegos, pero también
-          tengo otras habilidades, como el uso de Blender para montajes
-          de escenas surrealistas, o el uso de Photoshop para crear ediciones
+          Me llamo Luis Rosaldo, soy de México y me gusta mucho crear proyectos digitales
+          que pueda compartir con las personas. Me especializo en el desarrollo de
+          videojuegos, pero también tengo otras habilidades, como el uso de Blender para
+          montajes de escenas surrealistas, o el uso de Photoshop para crear ediciones
           basadas en canciones y música que me inspira.
         </p>
       </div>
-    </article>
-  </section>
+    </section>
 
-  <section id="services" class="service service-game sticky">
-    <article>
-      <figure>
-        <img src="img/Monster.png" width="200" />
-      </figure>
-      <div class="text">
-        <h2>Game Developer</h2>
+    <!-- Qué hago -->
+    <section id="services" class="p5-section is-alt">
+      <h2 class="p5-heading"><span>Qué hago</span></h2>
+      <div class="p5-grid p5-stagger">
+
+        <article class="p5-service">
+          <figure class="p5-service__media">
+            <img src="img/Monster.png" alt="Game Developer">
+          </figure>
+          <h3 class="p5-service__title">Game Developer</h3>
+          <p>
+            Como se puede ver en la página principal, he trabajado en varios proyectos a lo
+            largo de mi carrera universitaria, también he desarrollado varias herramientas de
+            gráficas computacionales usando SFML y DirectX 11. También he participado en el
+            desarrollo de simulaciones con físicas realistas, como un sistema de gravedad en
+            un sistema solar, una simulación de flotabilidad de objetos complejos y un sistema
+            de caminata mediante animación procedural.
+          </p>
+        </article>
+
+        <article class="p5-service">
+          <figure class="p5-service__media">
+            <img src="img/BMI.png" alt="Photoshop Montages">
+          </figure>
+          <h3 class="p5-service__title">Photoshop Montages</h3>
+          <p>
+            Uno de mis hobbys es crear montages en Photoshop inspirándome en mis canciones y
+            artistas favoritos. Hoy en día cuento con una colección completa de ediciones de
+            todas las canciones de los 4 álbumes de la banda de rock Starset.
+          </p>
+        </article>
+
+        <article class="p5-service">
+          <figure class="p5-service__media">
+            <img src="img/GTFA2.png" alt="Blender Lighting & Scene">
+          </figure>
+          <h3 class="p5-service__title">Blender Lighting &amp; Scene</h3>
+          <p>
+            Tengo los conocimientos y la capacidad para armar escenas en Blender mediante el
+            uso de diferentes modelos, conocimientos de fotografía aplicada al armado de la
+            escena final, y uso de diferentes técnicas de iluminación para crear escenarios
+            llamativos.
+          </p>
+        </article>
+
+        <article class="p5-service">
+          <figure class="p5-service__media">
+            <img src="img/OpcNature1.png" alt="Curiosidades">
+          </figure>
+          <h3 class="p5-service__title">Curiosidades</h3>
+          <ul class="p5-service__list">
+            <li>Me encanta escuchar música de todo tipo en todo momento: cuando trabajo, cuando estudio, cuando juego, etc.</li>
+            <li>Mi meta es llegar a vivir como un Game Developer.</li>
+            <li>Mis videojuegos favoritos son Fallout 3, Persona 5: Royal y Marvel vs Capcom 2.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="p5-section">
+      <h2 class="p5-heading"><span>Contacto</span></h2>
+      <div class="p5-panel">
+        <p>Encuentra todas mis redes y proyectos en un solo lugar:</p>
         <p>
-          Como se puede ver en la página principal, he trabajado en varios
-          proyectos a lo largo de mi carrera universitaria, también he desarrollado
-          varias herramientas de gráficas computaciones usando SFML y DirectX 11.
-          También he participado en el desarrollo de simulaciones con físicas realistas,
-          como un sistema de gravedad en un sistema solar, un simulación de flotabilidad
-          de objetos complejos y un sistema de caminata mediante animación procedural.
+          <a class="p5-btn" href="https://beacons.ai/starmise" target="_blank" rel="noopener noreferrer"><span>Starmise</span></a>
         </p>
       </div>
-    </article>
-  </section>
+    </section>
+  </main>
 
-  <section class="service service-photo sticky">
-    <article>
-      <figure>
-        <img src="img/BMI.png" width="200" />
-      </figure>
-      <div class="text">
-        <h2>Photoshop Montages</h2>
-        <p>
-          Uno de mis hobbys es crear montages en Photoshop inspirandome en mis canciones y
-          artistas favoritos. Hoy en día cuento con una colección completa de ediciones
-          de todas las canciones de los 4 álbumes de la banda de rock Starset.
-        </p>
-      </div>
-    </article>
-  </section>
+  <!-- Footer -->
+  <footer class="p5-footer">
+    <a href="https://beacons.ai/starmise" target="_blank">Redes Sociales de Starmise</a>
+  </footer>
 
-  <section class="service service-blender sticky">
-    <article>
-      <figure>
-        <img src="img/GTFA2.png" width="200" />
-      </figure>
-      <div class="text">
-        <h2>Blender Lighting & Scene</h2>
-        <p>
-          Tengo los conocimientos y la capacidad para armar escenas en Blender
-          mediante el uso de diferentes modelos, conocimientos de fotografía aplicada
-          al armado de la escena final, y uso de diferentes técnicas de iluminación para
-          crear escenarios llamativos.
-        </p>
-      </div>
-    </article>
-  </section>
-
-  <section class="service service-curiosity sticky">
-    <article>
-      <figure>
-        <img src="img/OpcNature1.png" width="200" />
-      </figure>
-      <div class="text">
-        <h2>Curiosidades</h2>
-        <ul>
-          <li>Me encanta escuchar música de todo tipo en todo momento, cuando trabajo, cuando estudio, cuando juego, etc. </li>
-          <li>Mi meta es llegar a vivir como un Game Developer</li>
-          <li>Mis videojuegos favoritos son Fallout 3, Persona 5: Royal y Marvel vs Capcom 2</li>
-        </ul>
-      </div>
-    </article>
-  </section>
-
-  <section id="contact" class="contact full-screen">
-    <a href="https://beacons.ai/starmise" target="_blank" rel="noopener noreferrer">Starmise</a>
-  </section>
-
-  <!--Llamada al JavaScript-->
-  <script src="scripts/main.js"></script>
+  <script type="module" src="scripts/projects.js"></script>
 </body>
-
 </html>

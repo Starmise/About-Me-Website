@@ -1,0 +1,273 @@
+/* Componentes Persona 5 */
+/* Botones, etiquetas, tarjetas, menú, secciones y títulos. */
+
+@use 'tokens' as *;
+
+/* Layout */
+.p5-container {
+  @include container;
+}
+
+/* Título de sección con bloque rojo angular */
+.p5-heading {
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 0.8em;
+  margin-bottom: 1rem;
+  color: var(--p5-white);
+  background: var(--p5-red);
+  clip-path: $clip-slab;
+  transform: skewX($skew);
+  box-shadow: $shadow-hard;
+
+  > * {
+    display: inline-block;
+    transform: skewX(calc(var(--skew) * -1)); /* contrarresta para legibilidad */
+  }
+}
+
+/* Botón con barrido de relleno al hover */
+.p5-btn {
+  --btn-bg: var(--p5-red);
+  --btn-fg: var(--p5-white);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.7em 1.6em;
+  font-family: $font-display;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--btn-fg);
+  background: var(--btn-bg);
+  border: 3px solid var(--p5-black);
+  clip-path: $clip-tab;
+  transform: skewX($skew);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.18s $ease-snap, box-shadow 0.18s ease;
+  box-shadow: $shadow-hard;
+
+  > * { transform: skewX(calc(var(--skew) * -1)); }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--p5-black);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s $ease-out;
+    z-index: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: skewX($skew) translateY(-3px) scale(1.03);
+    color: var(--p5-white);
+    box-shadow: $shadow-red, $shadow-hard;
+    outline: none;
+  }
+  &:hover::before,
+  &:focus-visible::before { transform: scaleX(1); }
+
+  /* El texto va por encima del barrido */
+  span, a { position: relative; z-index: 1; }
+
+  /* Variante contorno */
+  &.is-ghost {
+    --btn-bg: transparent;
+    --btn-fg: var(--p5-red);
+    border-color: var(--p5-red);
+    box-shadow: none;
+    &:hover { color: var(--p5-white); }
+    &::before { background: var(--p5-red); }
+  }
+}
+
+/* Etiquetas / chips */
+.p5-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  list-style: none;
+}
+.p5-tag {
+  font-family: $font-display;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2em 0.7em;
+  background: var(--p5-white);
+  color: var(--p5-black);
+  transform: skewX($skew);
+  clip-path: $clip-tab;
+
+  span { display: inline-block; transform: skewX(calc(var(--skew) * -1)); }
+}
+
+/* Grilla de proyectos */
+.p5-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+}
+
+/* Tarjeta de proyecto */
+.p5-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--p5-gray);
+  border: 3px solid var(--p5-black);
+  clip-path: $clip-shard;
+  overflow: hidden;
+  transform: skewX(1deg) rotate(-0.5deg);
+  transition: transform 0.2s $ease-snap, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: skewX(0) rotate(0) translateY(-6px) scale(1.02);
+    box-shadow: $shadow-red, $shadow-deep;
+  }
+
+  &__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s $ease-out, filter 0.3s ease;
+    }
+  }
+  &:hover &__media img {
+    transform: scale(1.08);
+    filter: saturate(1.2) contrast(1.05);
+  }
+
+  /* Degradado sobre la imagen */
+  &__media::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+  }
+
+  &__body {
+    position: relative;
+    padding: 1rem 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+  }
+
+  &__title {
+    @include p5-display(1.8rem, 0deg);
+    color: var(--p5-white);
+    margin: 0;
+  }
+
+  &__tagline {
+    font-size: 0.95rem;
+    color: var(--p5-red-glow);
+    margin: 0;
+  }
+
+  /* Marca angular roja en la esquina */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--p5-red);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: 2;
+  }
+
+  /* Enlace que cubre toda la tarjeta */
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    text-indent: -9999px;
+  }
+}
+
+/* Menú de navegación (pestañas inclinadas estilo P5) */
+.p5-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding: 0.6rem clamp(12px, 4vw, 40px);
+  background: var(--p5-black);
+  border-bottom: 4px solid var(--p5-red);
+
+  &__brand {
+    @include p5-display(1.6rem, $skew);
+    color: var(--p5-red);
+    margin-right: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.45em 1.1em;
+    font-family: $font-display;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--p5-white);
+    background: var(--p5-gray);
+    transform: skewX($skew);
+    transition: transform 0.15s $ease-snap, background 0.15s ease, color 0.15s ease;
+
+    span { display: inline-block; transform: skewX(calc(var(--skew) * -1)); }
+
+    &:hover,
+    &:focus-visible,
+    &.is-active {
+      background: var(--p5-red);
+      color: var(--p5-white);
+      transform: skewX($skew) scale(1.12) rotate(-2deg);
+      box-shadow: $shadow-red;
+      outline: none;
+    }
+  }
+}
+
+/* Sección con banda angular */
+.p5-section {
+  position: relative;
+  padding: clamp(40px, 7vw, 90px) 0;
+
+  &.is-alt {
+    background: var(--p5-gray);
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+  }
+}
+
+/* Panel de contenido genérico */
+.p5-panel {
+  background: var(--p5-gray);
+  border-left: 6px solid var(--p5-red);
+  padding: clamp(20px, 4vw, 40px);
+  clip-path: polygon(0 0, 100% 0, 99% 100%, 0 96%);
+}

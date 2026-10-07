@@ -2,14 +2,20 @@
   "name": "about-me-website",
   "version": "2.0.0",
   "description": "Website about Starmise",
-  "source": "src/IndexP3.html",
+  "source": ["src/IndexP3.html", "src/project.html", "src/indexMin.html"],
   "scripts": {
-    "start": "parcel src/IndexP3.html",
-    "build": "parcel build src/IndexP3.html"
+    "start": "parcel src/IndexP3.html src/project.html src/indexMin.html",
+    "build": "parcel build src/IndexP3.html src/project.html src/indexMin.html"
   },
   "author": "Starmise",
+  "staticFiles": {
+    "staticPath": "src/img",
+    "staticOutPath": "img"
+  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.14.4",
-    "parcel": "^2.14.4"
+    "parcel": "^2.14.4",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "svgo": "^3.3.3"
   }
 }
